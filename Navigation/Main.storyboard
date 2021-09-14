@@ -13,105 +13,11 @@
         <scene sceneID="bRX-aC-Cpi">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="Ca1-kw-dKJ" customClass="ProfileViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z6I-Co-0n3">
+                    <view key="view" contentMode="scaleToFill" id="4gj-kz-ukr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R3-Ww-Bmf" customClass="ProfileHeaderView" customModule="Navigation" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="220"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-lt-Viw">
-                                        <rect key="frame" x="16" y="16" width="150" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="bKV-Gk-kfS"/>
-                                            <constraint firstAttribute="width" constant="150" id="cZG-Sf-ty1"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="75"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXz-iS-cmE">
-                                        <rect key="frame" x="16" y="182" width="382" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <size key="titleShadowOffset" width="4" height="4"/>
-                                        <state key="normal" title="Show status">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="14"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                <size key="value" width="4" height="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadiu">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                <real key="value" value="0.69999999999999996"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buttonPressed:" destination="4R3-Ww-Bmf" eventType="touchUpInside" id="Q4f-c0-koE"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hipster Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-d8-ojy">
-                                        <rect key="frame" x="178" y="27" width="98" height="22"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pef-IO-kNy">
-                                        <rect key="frame" x="178" y="131" width="141.66666666666663" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add smth to show a status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nwE-ML-nGp">
-                                        <rect key="frame" x="178" y="65" width="220" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                <constraints>
-                                    <constraint firstItem="nwE-ML-nGp" firstAttribute="leading" secondItem="JL5-lt-Viw" secondAttribute="trailing" constant="12" id="2fn-xC-MOM"/>
-                                    <constraint firstItem="GjM-d8-ojy" firstAttribute="top" secondItem="4R3-Ww-Bmf" secondAttribute="top" constant="27" id="5iq-zi-oDJ"/>
-                                    <constraint firstItem="JL5-lt-Viw" firstAttribute="top" secondItem="4R3-Ww-Bmf" secondAttribute="top" constant="16" id="ELY-uG-CSR"/>
-                                    <constraint firstAttribute="height" constant="220" id="GyM-xA-WMF"/>
-                                    <constraint firstItem="pef-IO-kNy" firstAttribute="leading" secondItem="JL5-lt-Viw" secondAttribute="trailing" constant="12" id="Lem-Hv-cXn"/>
-                                    <constraint firstItem="JL5-lt-Viw" firstAttribute="leading" secondItem="4R3-Ww-Bmf" secondAttribute="leading" constant="16" id="Uvf-je-BA0"/>
-                                    <constraint firstItem="kXz-iS-cmE" firstAttribute="centerX" secondItem="4R3-Ww-Bmf" secondAttribute="centerX" id="a5d-qe-O3Q"/>
-                                    <constraint firstItem="pef-IO-kNy" firstAttribute="top" secondItem="nwE-ML-nGp" secondAttribute="bottom" constant="16" id="hBB-b2-u1p"/>
-                                    <constraint firstItem="nwE-ML-nGp" firstAttribute="top" secondItem="GjM-d8-ojy" secondAttribute="bottom" constant="16" id="k9U-yT-Sag"/>
-                                    <constraint firstItem="kXz-iS-cmE" firstAttribute="top" secondItem="JL5-lt-Viw" secondAttribute="bottom" constant="16" id="lCC-hw-AA5"/>
-                                    <constraint firstAttribute="trailing" secondItem="nwE-ML-nGp" secondAttribute="trailing" constant="16" id="lMZ-8B-YLG"/>
-                                    <constraint firstItem="kXz-iS-cmE" firstAttribute="leading" secondItem="JL5-lt-Viw" secondAttribute="leading" id="lO7-ze-K2L"/>
-                                    <constraint firstItem="kXz-iS-cmE" firstAttribute="top" secondItem="pef-IO-kNy" secondAttribute="bottom" constant="34" id="rSW-Hc-e6W"/>
-                                    <constraint firstItem="GjM-d8-ojy" firstAttribute="leading" secondItem="JL5-lt-Viw" secondAttribute="trailing" constant="12" id="xST-hB-Itf"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="fullNameLabel" destination="GjM-d8-ojy" id="JCl-a4-u2P"/>
-                                    <outlet property="imageView" destination="JL5-lt-Viw" id="sba-bb-nnA"/>
-                                    <outlet property="setStatusButton" destination="kXz-iS-cmE" id="8NH-fq-NjJ"/>
-                                    <outlet property="statusLabel" destination="pef-IO-kNy" id="sDK-zl-izS"/>
-                                    <outlet property="statusTextField" destination="nwE-ML-nGp" id="mOO-Zk-rL2"/>
-                                </connections>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="FCL-IZ-fe8"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                        <constraints>
-                            <constraint firstItem="4R3-Ww-Bmf" firstAttribute="top" secondItem="FCL-IZ-fe8" secondAttribute="top" id="bTn-9w-BsI"/>
-                            <constraint firstItem="4R3-Ww-Bmf" firstAttribute="leading" secondItem="FCL-IZ-fe8" secondAttribute="leading" id="mDj-zq-9vy"/>
-                            <constraint firstItem="FCL-IZ-fe8" firstAttribute="trailing" secondItem="4R3-Ww-Bmf" secondAttribute="trailing" id="o5d-Dg-YQu"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nN0-q5-Ydv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="TPi-FS-zh0"/>
                 </viewController>
@@ -280,31 +186,37 @@
             </objects>
             <point key="canvasLocation" x="-142.02898550724638" y="196.875"/>
         </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="rJ0-Cb-nHc">
+            <objects>
+                <viewController id="ALR-pr-LkW" customClass="PhotosViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H8i-fe-unz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lcN-Yh-JgW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iym-r8-D2M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tF-w5-ypw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525" y="197"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="4Os-Dq-ABB"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="avatar" width="142" height="88.5"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

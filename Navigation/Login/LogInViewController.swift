@@ -6,18 +6,21 @@ class LogInViewController: UIViewController {
     
     private let scrollView: UIScrollView = {
        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
     
     private let containerView: UIView = {
-        let conteinerView = UIView()
-        return conteinerView
+        let containerView = UIView()
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        return containerView
     }()
     
     private let logoImageView: UIImageView = {
         let logo = UIImageView()
         logo.contentMode = .scaleAspectFill
         logo.image = #imageLiteral(resourceName: "logo")
+        logo.translatesAutoresizingMaskIntoConstraints = false
         return logo
     }()
     private let emailOrPhoneTextField: UITextField = {
@@ -36,6 +39,7 @@ class LogInViewController: UIViewController {
         emailOrPhoneTextField.layer.cornerRadius = 10
         emailOrPhoneTextField.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         emailOrPhoneTextField.placeholder = "Email or phone"
+        emailOrPhoneTextField.translatesAutoresizingMaskIntoConstraints = false
         return emailOrPhoneTextField
     }()
     private let passwordTextField: UITextField = {
@@ -55,6 +59,7 @@ class LogInViewController: UIViewController {
         passwordTextField.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         return passwordTextField
     }()
     
@@ -66,6 +71,7 @@ class LogInViewController: UIViewController {
         logInButton.layer.cornerRadius = 10
         logInButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
         logInButton.setTitleColor(.white, for: .normal)
+        logInButton.translatesAutoresizingMaskIntoConstraints = false
         logInButton.isEnabled = false
 
         return logInButton
@@ -119,12 +125,6 @@ class LogInViewController: UIViewController {
         scrollView.verticalScrollIndicatorInsets = .zero
     }
     override func viewWillLayoutSubviews() {
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        emailOrPhoneTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        logInButton.translatesAutoresizingMaskIntoConstraints = false
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
         let constrains = [
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -169,12 +169,11 @@ class LogInViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @IBAction func tap (_sender: Any) {
-        let storyboard = UIStoryboard (name:"Main", bundle: nil)
-        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
+    @objc func tap() {
+        let vc = ProfileViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    @IBAction func textFieldDidChange () {
+    @objc func textFieldDidChange () {
         if passwordTextField.text!.isEmpty || emailOrPhoneTextField.text!.isEmpty {
             logInButton.isEnabled = false
         } else {
